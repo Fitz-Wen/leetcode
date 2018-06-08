@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>122验证回文串</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var isPalindrome = function(s) {
+		    var str = s.toLowerCase().replace(/[\ |\(|\)|\~|\`|\!|\@|\#|\$|\%|\^|\&|\*|||\-|\_|\+|\=|\||\\|||\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g,'');
+		    	var str1 = s.split("").reverse().toString().toLowerCase().replace(/[\ |\(|\)|\~|\`|\!|\@|\#|\$|\%|\^|\&|\*|||\-|\_|\+|\=|\||\\|||\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g,'')
+		    	console.log(str);
+		    	console.log(str1);
+					if(str===str1){
+						return true;
+					}else{
+						return false;
+					}
+		};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>20有效的括号</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var  s= "([)]";
+		var isValid = function(s) {
+    	var arr = [];
+    	var len = s.length;
+    	var flag = true;
+    	for(var i =0;i<len;i++){
+    		var char = s.charAt(i);
+    		var isEmpty = arr.length ===0;
+    		var arrTop = arr[arr.length-1];
+    		
+    		var match = function(matchStr){
+    			if(!isEmpty && arrTop===matchStr ){
+    				arr.pop();
+    			}else{
+    				flag = false;
+    			}
+    		}
+    		 	if (char === '[' || char === '{' || char === '(') {
+			      arr.push(char);
+			    } else if (char === ']') {
+			      match('[')
+			    } else if (char === '}') {
+			      match('{')
+			    } else if (char === ')') {
+			      match('(');
+			    } else {
+			      return false;
+			    }
+    	}
+    	if(arr.length!==0){
+    		return false;
+    	}else{
+    		return flag;
+    	}
+		};
+		isValid(s);
+		</script>
+	</body>
+</html>

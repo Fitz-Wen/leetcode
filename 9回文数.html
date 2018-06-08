@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9回文数</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//			9 回文
+			var  x = -121;
+			var isPalindrome = function(x) {
+    			y = x.toString().split("").reverse().join("");
+    			x = x.toString();
+    			if(x === y){
+    				console.log('true')
+    			}else{
+    				console.log('fasle');
+    			}
+			};
+			isPalindrome(x);
+//			9回文ed
+		</script>
+	</body>
+</html>
